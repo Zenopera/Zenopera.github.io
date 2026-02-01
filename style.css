@@ -117,23 +117,40 @@ h2 {
     padding-left: 20px;
 }
 
-/* ===== Passions Section ===== */
-.passion-image img,
-.project-item img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-top: 15px;
+/* ===== Passions Section Media (side by side) ===== */
+.passion-media {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* responsive: si mettono uno sopra l'altro su mobile */
+    margin-top: 20px;
 }
 
-.passion-video video {
+/* Each media item (image or video) */
+.passion-media .media-item {
+    flex: 1 1 45%; /* circa metà larghezza ciascuno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image style */
+.passion-media .media-item img {
     width: 100%;
+    max-width: 400px; /* simile al video */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-top: 15px;
 }
+
+/* Video style */
+.passion-media .media-item video {
+    width: 100%;
+    max-width: 400px; /* simile all'immagine */
+    aspect-ratio: 16/9; /* forza proporzioni corrette */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
 
 /* ===== Contact Section ===== */
 #contact {
